@@ -1,0 +1,189 @@
+<!doctype html>
+<html ng-app="RowCypher">
+<head>
+  <title></title>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content"width=device-width, initial-scale=1">
+  <!---->
+  <!--<link href="layout.css" type="text/css" rel="stylesheet">-->
+  <meta name="description" content="Row Cypher Institute" />
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script> <!-- script link for JQuery location -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+  <script src="js/Controllers/MainController.js"></script> 
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="js/site.js"></script>
+</head>
+<body>
+
+  <div class="header">
+   <img src="Images/logo.jpg" class="center-block"> <!-- Maybe link to the Row Cypher page already in existence? -->
+   <!-- input donate button here -->
+   <!-- contact button -->
+   </br>
+  </div>
+ 
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+      <h3 class="modal-title">{{ person.name }}</h3>
+    </div>
+    <div class="modal-body">
+      <img ng-src"{{ person.portrait.large }}" />
+      <p>{{ person.bio }}</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-warning" ng-click="cancel()">Close</button>
+    </div>
+  </script>
+  <style>
+#scrollArea{height: 400px; overflow: auto;}
+#bottom {display: block; margin-top: auto;}
+  </style>
+  <div ng-controller="MainController">
+    <tabset justified="true" type="pills" style="border: solid #00A3CC 1px;">
+   
+      <tab heading="Fellows">
+        <div ng-repeat="person in fellows">
+          <button class="btn btn-default" ng-click="open(person)">{{ person.name }}</button>
+        </div>
+      </tab>
+
+      <tab heading="Master Course Teachers">
+        <div ng-repeat="person in guestFellows">
+          <button class="btn btn-default" ng-click="open(person)">{{ person.name }}</button> 
+        </div>
+      </tab>
+
+      <tab heading="About Program">
+        <div> 
+          <!-- move about section too here -->        
+	        <h3 class="text-center">Overview</h3>
+	        <p>Row Cypher Institute is an 8-week leadership development program that empowers young professionals in performing arts management, Live entertainment events, and social entrepreneurship. Participants gain real Chicago-based creative, management, and production skills and experience through a project-based workshop series led by a board of diverse entrepreneurs and creative’s. Meeting 2.5 hours once a week for 8 weeks in down town Chicago.  As a capstone achievement, each cohort produces a high quality performing arts showcase, highlighting their increased capacity as community-based arts leaders and social change agents.</p>
+	       <!-- maybe some images of classes/performances-->
+        </div>
+        <div>
+          <p>Class Time 7:00pm to 9:00pm</p>
+          <p>Location - Hosting Internation Chicago</p>
+          <ul class="list-unstyled">
+            <li>Week 1 - Jan 13th 2016 - Welcome & Introduction to writing</li>
+            <li>Week 2 - Jan 20th 2016 - Performance Training</li>
+            <li>Week 3 - Jan 27th 2016 - Event Planning and management</li>
+            <li>Week 4 - Feb 3rd 2016  - Promotions / communications</li>
+            <li>Week 5 - Feb 10th 2016 - Final Show planning</li>
+            <li>Week 6 - Feb 17th 2016 - Entrepreneurship & Leadership </li>
+            <li>Week 7 - Feb 24th 2016 - Music business</li>
+            <li>Week 8 - March 2nd 2016 - Final show </li>
+          </ul>
+        </div>
+        <div>
+          <h4>Row Cypher Institute Experience</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul> 
+        </div>
+        <div>
+          <h4>What Students Gain Through The Institute</h4>
+        </div>
+      </tab>
+
+      <tab heading="Apply Today">
+        <div id="scrollArea" class="container" ng-controller="ScrollController" style="border: black solid 1px;">
+          <form name="application" novalidate>
+            <div>
+              <h5 class="text-center">Personal Information</h5>
+              <div class="input-group" style="padding-top: 2px;padding-bottom 2px;"> 
+                <span class="input-group-addon" id="sizing-addon2">First Name:</span>
+                  <input type="text" ng-model="fname" class="form-control" placeholder="First Name" aria-describedby="sizing-addon2">
+                <span class="input-group-addon" id="sizing-addon2">Last name:</span>   
+                  <input type="text" ng-model="lname" class="form-control" placeholder="Last Name" aria-descriedby="sizing-addon2">  
+              </div>
+           </div> 
+           <div class="input-group" style="padding-top: 2px;padding-bottom:2px;">
+             <span class="input-group-addon" id="sizing-addon2">Date of Birth:</span> 
+               <input type="text" ng-model="DOB" class="col-sm-3 form-control" placeholder="Date of Birth" aria-describedby="sizing-addon2">
+             <span class="input-group-addon" id="sizing-addon2">Current Email:</span>     
+               <input type="email" ng-model="email" class="col-sm-3 form-control" placeholder="Current email" aria-describedby="sizing-addon2">
+           </div>
+         
+           <h4 class="text-center">Nominating parter</h4>
+
+           <select multiple class="form-control">
+             <option>Choice 1</option>
+             <option>Choice 2</option>
+             <option>Choice 3</option>
+             <option>Choice 4</option>
+             <option>Choice 5</option>
+           </select>
+ 
+           <div class="form-group" style="padding: 3px;">
+               
+              <h4 class="text-center">Please answer the following questions in 300-500 words.</h4>
+          
+              <div class="form-group">  
+                <label class="col-sm-4 control-label">Educational Background</label>
+                  <textarea type="textarea" class="form-control" rows="3" ng-Minlength="300" ng-maxlength="500" ng-model="education"></textarea>
+             </div> 
+            
+             <div class="form-group" style="padding: 3px;"> 
+               <label class="col-sm-4 control-label">Driving interest</label>
+                  <textarea type="textarea" class="form-control" rows="3" ng-Minlength="300" ng-maxlength="500" ng-model="interest"></textarea>
+             </div>
+             
+             <div class="form-group" style="padding: 3px;">
+               <label class="control-label">Planning experience</label>
+               <textarea type="textarea" class="form-control" rows="3" ng-minlength="300" ng-maxlength="500" ng-model="experience"></textarea> 
+             </div>
+           
+                <div class="radio">
+                  <label class="radio-inline">  
+                    <input type="radio" ng-nodel="frequency" value="not active"> 
+                  not active
+                  </label>
+                  <label class="radio-inline"> 
+                    <input type="radio" ng-nodel="frequency" value="somewhat active">Somewhat active</input> 
+                 Somewhat active
+                  </label>
+                  <label class="radio-inline"> 
+                    <input type="radio" ng-nodel="frequency" value="regularly active">regularly active</input> 
+                 Regularly active
+                  </label>
+                  <label class="radio-inline"> 
+                    <input type="radio" ng-nodel="frequency" value="never rest">I never rest</input> 
+                  I never rest
+                  </label>
+                </div><!-- close radio div -->
+              
+            </div><!-- close form group -->
+          
+          </form>
+          
+          <div class="footer text-center" style="padding: 2px;">
+            <button id="bottom" ng-click="submitApplication()">Submit your application</button> 
+          </div>
+        </div><!-- close container -->
+      </tab>
+
+      <tab heading="Contact Us">
+      </tab>
+
+    </tabset>
+  </div> 
+	
+  <div>
+    <div class="col-md-6 text-center"> <!-- start about/summary -->
+      <form class="text-center">
+        <p>Subscribe to mailing list: </p>
+	      <input type="text" ng-model="emailSub" />
+        <button ng-click="subscribe()">Subscribe</button>
+      </form> 
+    </div> 
+  </div> <!-- end footer fluid-container -->
+  
+</body>
+</html>
