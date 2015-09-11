@@ -56,7 +56,7 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'and management. Jeremy is currently running operations at the OTG LA office and handling the ' +
          'careers of producer D Phelps and recording artists BK Bambino, Sir the Baptist & more.',
 	  portrait: {
-		  large: 'Images/jeremy_cohenL.jpg',
+		  large: 'Images/Artists/jeremy_cohenL.jpg',
 		  small: '' 
 	  }
 	}, {
@@ -74,7 +74,7 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'Common Kanye hybrid laced with a lil Jay-z.\n\nIn the past few years Que Billah has opened ' +
          'for: Wu-Tang,Lupe Fiasco, Wiz Kalifa,Ludacris, Talib Kweli,Rakin, KRS1,Twista,Slum Village',
     portrait: {
-      large: 'Images/que_billah.jpg',
+      large: 'Images/Artists/que_billah.jpg',
       small: '' 
     }
   }, {
@@ -88,7 +88,7 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'he also manages local band The O\'My\'s. Through and through Jake helps to move the scene ' +
          'forward by letting those outside it know what\'s happening on the ground floor.',
      portrait: {
-       large: 'Images/jake_krzeczowski.jpg',
+       large: 'Images/Artists/jake_krzeczowski.jpg',
        small: ''
      }
   }, {
@@ -102,7 +102,7 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'healthcare company. He was voted by the students at Kellogg as the Professor of the Year ' +
          'in 2008 and was a finalist for the award in 2014.',
      portrait: {
-       large: 'Images/harry_kraemer.jpg',
+       large: 'Images/Artists/harry_kraemer.jpg',
        small: ''
      }
   }, {
@@ -131,9 +131,11 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'www.reverbnation.com/drunkenmonkeee\nhttp://drunkenmonkeee1980.bandcamp.com' +
          '\nhttp://www.youtube.com/watch?v=B9cFpHgLvZw',
      portrait: {
-       large: 'Images/drunken_monkee_2.jpg',
+       large: 'Images/Artists/drunken_monkeee_2.jpg',
        small: ''
      }
+  }, {
+    name:  ''   
   }];
 	
 //	$scope.fellows = [{

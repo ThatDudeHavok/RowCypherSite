@@ -9,12 +9,13 @@
   <meta name="description" content="Row Cypher Institute" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script> <!-- script link for JQuery location -->
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
-  <script src="js/Controllers/MainController.js"></script> 
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="js/site.js"></script>
+  <script src="js/Controllers/MainController.js"></script>
    
   <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <style type="text/css">
   	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
   	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -23,6 +24,19 @@
 </head>
 <body>
 
+<!-- google analytics tracker -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66937326-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
   <div class="header">
    <img src="Images/logo.jpg" class="center-block"> <!-- Maybe link to the Row Cypher page already in existence? -->
    <!-- input donate button here -->
@@ -30,13 +44,14 @@
    </br>
   </div>
  
-  <script type="text/ng-template" id="myModalContent.html">
+  <script type="text/ng-template" id="myModalContent.html" ng-controller="MainController">
     <div class="modal-header">
       <h3 class="modal-title">{{ person.name }}</h3>
     </div>
     <div class="modal-body">
-      <img ng-src"{{ person.portrait.large }}" />
-      <p>{{ person.bio }}</p>
+        <img class="setImg" src="{{ person.portrait.large }}" />
+        
+    <span><p>{{ person.bio }}</p></span>
     </div>
     <div class="modal-footer">
       <button class="btn btn-warning" ng-click="cancel()">Close</button>
@@ -61,7 +76,7 @@
       <div class="container"><div class="text-center">
           <div clas="text-center">
             <h5>Class Time 7:00pm to 9:00pm</h5>
-            <h5>Location - Hosting Internation Chicago</h5>
+            <h5>Location - Downtown Chicago</h5>
           </div></div> 
           <div> 
           <!-- move about section too here -->        
@@ -114,80 +129,12 @@
       </tab>
 
       <tab heading="Apply Today">
-        <div id="scrollArea" class="container" ng-controller="ScrollController" style="border: black solid 1px;">
-          <form name="application" novalidate>
-            <div>
-              <h5 class="text-center">Personal Information</h5>
-              <div class="input-group" style="padding-top: 2px;padding-bottom 2px;"> 
-                <span class="input-group-addon" id="sizing-addon2">First Name:</span>
-                  <input type="text" ng-model="fname" class="form-control" placeholder="First Name" aria-describedby="sizing-addon2">
-                <span class="input-group-addon" id="sizing-addon2">Last name:</span>   
-                  <input type="text" ng-model="lname" class="form-control" placeholder="Last Name" aria-descriedby="sizing-addon2">  
-              </div>
-           </div> 
-           <div class="input-group" style="padding-top: 2px;padding-bottom:2px;">
-             <span class="input-group-addon" id="sizing-addon2">Date of Birth:</span> 
-               <input type="text" ng-model="DOB" class="col-sm-3 form-control" placeholder="Date of Birth" aria-describedby="sizing-addon2">
-             <span class="input-group-addon" id="sizing-addon2">Current Email:</span>     
-               <input type="email" ng-model="email" class="col-sm-3 form-control" placeholder="Current email" aria-describedby="sizing-addon2">
-           </div>
-         
-           <h4 class="text-center">Nominating parter</h4>
+<!-- www.123contactform.com script begins here -->
 
-           <select multiple class="form-control">
-             <option>Choice 1</option>
-             <option>Choice 2</option>
-             <option>Choice 3</option>
-             <option>Choice 4</option>
-             <option>Choice 5</option>
-           </select>
- 
-           <div class="form-group" style="padding: 3px;">
-               
-              <h4 class="text-center">Please answer the following questions in 300-500 words.</h4>
-          
-              <div class="form-group">  
-                <label class="col-sm-4 control-label">Educational Background</label>
-                  <textarea type="textarea" class="form-control" rows="3" ng-Minlength="300" ng-maxlength="500" ng-model="education"></textarea>
-             </div> 
-            
-             <div class="form-group" style="padding: 3px;"> 
-               <label class="col-sm-4 control-label">Driving interest</label>
-                  <textarea type="textarea" class="form-control" rows="3" ng-Minlength="300" ng-maxlength="500" ng-model="interest"></textarea>
-             </div>
-             
-             <div class="form-group" style="padding: 3px;">
-               <label class="control-label">Planning experience</label>
-               <textarea type="textarea" class="form-control" rows="3" ng-minlength="300" ng-maxlength="500" ng-model="experience"></textarea> 
-             </div>
-           
-                <div class="radio">
-                  <label class="radio-inline">  
-                    <input type="radio" ng-nodel="frequency" value="not active"> 
-                  not active
-                  </label>
-                  <label class="radio-inline"> 
-                    <input type="radio" ng-nodel="frequency" value="somewhat active">Somewhat active</input> 
-                 Somewhat active
-                  </label>
-                  <label class="radio-inline"> 
-                    <input type="radio" ng-nodel="frequency" value="regularly active">regularly active</input> 
-                 Regularly active
-                  </label>
-                  <label class="radio-inline"> 
-                    <input type="radio" ng-nodel="frequency" value="never rest">I never rest</input> 
-                  I never rest
-                  </label>
-                </div><!-- close radio div -->
-              
-            </div><!-- close form group -->
-          
-          </form>
-          
-          <div class="footer text-center" style="padding: 2px;">
-            <button id="bottom" ng-click="submitApplication()">Submit your application</button> 
-          </div>
-        </div><!-- close container -->
+<script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1569408.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
+
+<p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--1569408.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p><!-- www.123contactform.com script ends here -->
+
       </tab>
 
       <tab heading="Contact Us">
@@ -197,9 +144,10 @@
 
     </tabset>
   </div> 
-	
+  
   <div class="row">
-  <div class="col-md-4 text-center">
+  <div class="text-center">
+  <div class="">
     <!-- Begin MailChimp Signup Form -->
     
 
@@ -227,6 +175,7 @@
 <!--End mc_embed_signup-->
 </div>
   </div> 
+  </div>
   
 </body>
 </html>
