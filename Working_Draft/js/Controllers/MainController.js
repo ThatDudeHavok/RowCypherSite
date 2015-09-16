@@ -49,7 +49,7 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'In 2005, Jeremy embarked on a six-month+ tour with Oakland, CA-based hard rock band, All ' +
          'Shall Perish. On tour, Jeremy handled the responsibilities of playing bass guitar, tracking ' +
          'band merchandise, confirming bookings, reporting record sales to Nuclear Blast Records and ' +
-         'Nielsen SoundScan, and securing booking & guarantee money.\n	In 2006-07, Jeremy worked in ' +
+         'Nielsen SoundScan, and securing booking & guarantee money.\n\n	In 2006-07, Jeremy worked in ' +
          'the marketing department of the largest global law firm, DLA Piper. In 2009, Jeremy ' +
          'graduated from Columbia College Chicago with a Sports Management B.A. The culmination of ' +
          'his experience gives Jeremy Cohen a balanced background in producing, performing, marketing, ' +
@@ -127,15 +127,34 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'Boutique, Marry To The Mob Nyc,Shaolin Temple Monk Sifu Shi Yan Ming, Christian Rich, ' +
          'Nuyorican Poets Cafe, and Chicago Public Schools.People have likened Drunken Monkeee\'s ' +
          'sound to that of Cee-Lo Green, Busta Rhymes, Redman, Issac Hayes,and Ol\' Dirty Bastard.' +
-         '\n\nDrunken Monkeee\'s links:\nwww.soundclound.com/drunkenmonkeee\n' + 
-         'www.reverbnation.com/drunkenmonkeee\nhttp://drunkenmonkeee1980.bandcamp.com' +
-         '\nhttp://www.youtube.com/watch?v=B9cFpHgLvZw',
+         '\n\nDrunken Monkeee\'s links:\n' +
+         'www.soundclound.com/drunkenmonkeee\n' + 
+         'www.reverbnation.com/drunkenmonkeee\n' +
+         'http://drunkenmonkeee1980.bandcamp.com\n' +
+         'http://www.youtube.com/watch?v=B9cFpHgLvZw',
      portrait: {
        large: 'Images/Artists/drunken_monkeee_2.jpg',
        small: ''
      }
   }, {
-    name:  ''   
+    name: 'RJ Eldridge',
+    bio: 'RJ Eldridge is a writer, emergent multidisciplinary artist, curator, educator and ' +
+         'thinker. A graduate of the University of South Florida’s Master’s program in Africana Studies, ' +
+         'where he focused on literature and theory, Eldridge has engaged widely on the role of ' +
+         'the arts in the construction of identity, and seeks to expand the dimensions of contemporary ' +
+         'discussion on the intersections between performance, history, race, ontology and myth. His ' +
+         'current projects inquire about the politics of millennial identity, contemporary ' +
+         'racial literacy, and the power of the image to shape and be shaped by both.\n\nEldridge ' +
+         'has instructed at the University of South Florida and the Noble Network Charter ' +
+         'Schools, and has served as a teaching artist with several notable organizations, ' +
+         'including Young Chicago Authors, Chicago Slam Works, Chicago Danztheatre and the ' +
+         'Storyographers. He made a national television debut in September 2013 as a performer ' +
+         'in the NAACP Image-Award nominated series, Lexus Presents: Verses and Flow, and stars ' +
+         'in the upcoming short film Akata.\n\nHe currently resides in Chicago.',
+    portrait: {
+      large: 'Images/Artits/reginald_eldridge.jpg',
+      small: ''
+    }   
   }];
 	
 //	$scope.fellows = [{

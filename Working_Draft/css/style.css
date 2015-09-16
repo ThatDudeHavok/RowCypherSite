@@ -1,0 +1,35 @@
+body {
+  background-image: url("../Images/websiteWallpaper2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.setImg { 
+  width: auto;
+  height: 300px;
+}
+
+.font {
+  font-family: Times;
+}
+
+.list ul li {
+  font-family: Times;
+}
+
+.test li {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.testC > ul li , h4 {
+  font-family: "Courier New", Courier, monospace
+}
+
+.space {
+  padding: 8px;
+}

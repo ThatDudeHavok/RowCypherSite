@@ -8,7 +8,7 @@
   <!--<link href="layout.css" type="text/css" rel="stylesheet">-->
   <meta name="description" content="Row Cypher Institute" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script> <!-- script link for JQuery location -->
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="js/site.js"></script>
@@ -49,9 +49,8 @@
       <h3 class="modal-title">{{ person.name }}</h3>
     </div>
     <div class="modal-body">
-        <img class="setImg" src="{{ person.portrait.large }}" />
-        
-    <span><p>{{ person.bio }}</p></span>
+          <img class="setImg" src="{{ person.portrait.large }}" />
+        <p>{{ person.bio }}</p>
     </div>
     <div class="modal-footer">
       <button class="btn btn-warning" ng-click="cancel()">Close</button>
@@ -67,24 +66,29 @@
       </tab>
 
       <tab heading="Master Course Teachers">
-        <div ng-repeat="person in fellows">
-          <button class="btn btn-default" ng-click="open(person)">{{ person.name }}</button> 
+        <div>
+          <span class="space" ng-repeat="person in fellows">
+            <button class="btn btn-default space" ng-click="open(person)">{{ person.name }}</button> 
+          </span>  
         </div>
       </tab>
 
       <tab heading="About Program">
-      <div class="container"><div class="text-center">
-          <div clas="text-center">
+      <div class="container">
+        <div class="text-center">
+          <div class="text-center">
             <h5>Class Time 7:00pm to 9:00pm</h5>
             <h5>Location - Downtown Chicago</h5>
-          </div></div> 
-          <div> 
-          <!-- move about section too here -->        
+            <h5>Tuition for the Institute is $450. Upon agreeing on your acceptance to the institute a $200 non refundable deposit is due.</h5> 
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-md-6"> 
 	          <h3 class="text-center">Overview</h3>
 	          <p>Row Cypher Institute is an 8-week leadership development program that empowers young professionals in performing arts management, Live entertainment events, and social entrepreneurship. Participants gain real Chicago-based creative, management, and production skills and experience through a project-based workshop series led by a board of diverse entrepreneurs and creative’s. Meeting 2.5 hours once a week for 8 weeks in down town Chicago.  As a capstone achievement, each cohort produces a high quality performing arts showcase, highlighting their increased capacity as community-based arts leaders and social change agents.</p>
-	        <!-- maybe some images of classes/performances-->
           </div>
-        <div class="row">
+        </div>
+        <div class="row test">
         <div class="col-md-6">
           <h4>Week by Week</h4>
           <ul>
@@ -110,7 +114,7 @@
             <li>Final show or production for the Chicago community showcasing what students have learned</li>
         </div>
       </div><!-- close row -->
-      <div class="row">
+      <div class="row test">
         <div>
           <h4>What Students Gain Through The Institute</h4>
           <ul>
@@ -131,16 +135,16 @@
       <tab heading="Apply Today">
 <!-- www.123contactform.com script begins here -->
 
-<script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1569408.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
-
-<p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--1569408.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p><!-- www.123contactform.com script ends here -->
-
+  <script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1569408.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
+  
+  <p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--1569408.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p><!-- www.123contactform.com script ends here -->
+  
       </tab>
 
       <tab heading="Contact Us">
       </tab>
       
-      <tab heading="sponser"></tab>
+      <tab heading="Sponsers"></tab>
 
     </tabset>
   </div> 
