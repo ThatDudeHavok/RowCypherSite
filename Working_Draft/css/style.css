@@ -5,31 +5,39 @@ body {
   background-size: cover;
 }
 
+.background {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .imgContainer {
   position: relative;
+}
+
+.centerImg {
+  margin: auto;
+  padding: 5px;
 }
 
 .setImg { 
   width: auto;
   height: 300px;
+  /*margin: auto;*/
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
-.font {
-  font-family: Times;
-}
-
-.list ul li {
-  font-family: Times;
-}
-
-.test li {
+.times {
   font-family: "Times New Roman", Times, serif;
-}
-
-.testC > ul li , h4 {
-  font-family: "Courier New", Courier, monospace
 }
 
 .space {
   padding: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-children {
+  text-align: center;
 }

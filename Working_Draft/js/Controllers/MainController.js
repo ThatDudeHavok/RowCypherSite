@@ -152,11 +152,12 @@ app.controller('MainController', ['$scope', '$modal', function($scope, $modal){
          'in the NAACP Image-Award nominated series, Lexus Presents: Verses and Flow, and stars ' +
          'in the upcoming short film Akata.\n\nHe currently resides in Chicago.',
     portrait: {
-      large: 'Images/Artits/reginald_eldridge.jpg',
+      large: 'Images/reginald_eldridge.jpg',
       small: ''
     }   
   }];
-	
+
+
 //	$scope.fellows = [{
 //	  name: 'Coming soon',
 //	  bio: '',

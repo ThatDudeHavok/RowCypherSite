@@ -1,0 +1,168 @@
+<!doctype html>
+<html ng-app="RowCypher">
+<head>
+  <title></title>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content"width=device-width, initial-scale=1">
+  <!---->
+  <!--<link href="layout.css" type="text/css" rel="stylesheet">-->
+  <meta name="description" content="Row Cypher Institute" />
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script> <!-- script link for JQuery location -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css">
+  <script src="js/Controllers/MainController.js"></script> 
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="js/site.js"></script>
+   
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+</head>
+<body>
+
+  <div class="header">
+   <img src="Images/logo.jpg" class="center-block"> <!-- Maybe link to the Row Cypher page already in existence? -->
+   <!-- input donate button here -->
+   <!-- contact button -->
+   </br>
+  </div>
+ 
+  <script type="text/ng-template" id="myModalContent.html" ng-controller="MainController">
+    <div class="modal-header">
+      <h3 class="modal-title">{{ person.name }}</h3>
+    </div>
+    <div class="modal-body">
+      <img ng-src"{{ person.portrait.large }}" />
+      <p>{{ person.bio }}</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-warning" ng-click="cancel()">Close</button>
+    </div>
+  </script>
+  <div ng-controller="MainController">
+    <tabset justified="true" type="pills" style="background-color: white;">
+   
+      <tab heading="Students">
+        <div ng-repeat="person in students">
+          <button class="btn btn-default" ng-click="open(person)">{{ person.name }}</button>
+        </div>
+      </tab>
+
+      <tab heading="Master Course Teachers">
+        <div ng-repeat="person in fellows">
+          <button class="btn btn-default" ng-click="open(person)">{{ person.name }}</button> 
+        </div>
+      </tab>
+
+      <tab heading="About Program">
+      <div class="container"><div class="text-center">
+          <div clas="text-center">
+            <h5>Class Time 7:00pm to 9:00pm</h5>
+            <h5>Location - Hosting Internation Chicago</h5>
+          </div></div> 
+          <div> 
+          <!-- move about section too here -->        
+	          <h3 class="text-center">Overview</h3>
+	          <p>Row Cypher Institute is an 8-week leadership development program that empowers young professionals in performing arts management, Live entertainment events, and social entrepreneurship. Participants gain real Chicago-based creative, management, and production skills and experience through a project-based workshop series led by a board of diverse entrepreneurs and creative’s. Meeting 2.5 hours once a week for 8 weeks in down town Chicago.  As a capstone achievement, each cohort produces a high quality performing arts showcase, highlighting their increased capacity as community-based arts leaders and social change agents.</p>
+	        <!-- maybe some images of classes/performances-->
+          </div>
+        <div class="row">
+        <div class="col-md-6">
+          <h4>Week by Week</h4>
+          <ul>
+            <li>Week 1 - Jan 13th 2016 - Welcome & Introduction to writing</li>
+            <li>Week 2 - Jan 20th 2016 - Performance Training</li>
+            <li>Week 3 - Jan 27th 2016 - Event Planning and management</li>
+            <li>Week 4 - Feb 3rd 2016  - Promotions / communications</li>
+            <li>Week 5 - Feb 10th 2016 - Final Show planning</li>
+            <li>Week 6 - Feb 17th 2016 - Entrepreneurship & Leadership </li>
+            <li>Week 7 - Feb 24th 2016 - Music business</li>
+            <li>Week 8 - March 2nd 2016 - Final show </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4>Row Cypher Institute Experience</h4>
+          <ul>
+            <li>8 weeks of workshops</li>
+            <li>2.5 hours a week</li>
+            <li>located in Chicago's Downtown Loop</li>
+            <li>20 students from various backgrounds</li>
+            <li>2 Row Cypher Institute Facilitators</li>
+            <li>Between 4 and 8 Master Course Teachers</li>
+            <li>Final show or production for the Chicago community showcasing what students have learned</li>
+        </div>
+      </div><!-- close row -->
+      <div class="row">
+        <div>
+          <h4>What Students Gain Through The Institute</h4>
+          <ul>
+            <li>Indroduction to creative writing</li>
+            <li>Strong more confident stage presence and performance</li>
+            <li>Hands-on experience in event plannign and management</li>
+            <li>mentorship from professionals</li>
+            <li>The basics of the music business industry</li>
+            <li>Branding and promotion experience</li>
+            <li>Confidence to create social change in their neighborhoods</li>
+            <li>network that will support long after the completion of the institute</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      </tab>
+
+      <tab heading="Apply Today">
+<div>
+<!-- www.123contactform.com script begins here -->
+
+<script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1569408.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
+
+<p>Powered by <a class="footerLink13" title="123ContactForm" href="http://www.123contactform.com">123ContactForm</a> | <a style="font-size:small!important;color:#000000!important; text-decoration:underline!important;" title="Looks like phishing? Report it!" href="http://www.123contactform.com/sfnew.php?s=123contactform-52&control119314=http:///contact-form--1569408.html&control190=Report%20abuse" rel="nofollow">Report abuse</a></p><!-- www.123contactform.com script ends here -->
+</div>
+      
+
+
+      </tab>
+
+      <tab heading="Contact Us">
+      </tab>
+      
+      <tab heading="sponser"></tab>
+
+    </tabset>
+  </div> 
+	
+  <div class="row">
+  <div class="col-md-4 text-center">
+    <!-- Begin MailChimp Signup Form -->
+    
+
+
+<div id="mc_embed_signup">
+<form action="//rowcypherinstitute.us11.list-manage.com/subscribe/post?u=3c23620a0625617f6789183ba&amp;id=977f051c62" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Subscribe to our mailing list</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_3c23620a0625617f6789183ba_977f051c62" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+</div>
+  </div> 
+  
+</body>
+</html>
